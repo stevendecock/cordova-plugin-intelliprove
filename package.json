@@ -1,0 +1,21 @@
+{
+    "name": "cordova-plugin-intelliprove",
+    "version": "1.0.0",
+    "description": "Apache Cordova plugin for IntelliProve SDK to perform face scans.",
+    "main": "www/intelliprove.js",
+    "cordova": {
+      "id": "cordova-plugin-intelliprove",
+      "platforms": [
+        "android",
+        "ios"
+      ]
+    },
+    "keywords": [
+      "cordova",
+      "plugin",
+      "intelliprove",
+      "facescan"
+    ],
+    "license": "Apache-2.0"
+  }
+  
