@@ -17,7 +17,10 @@
         <param name="android-package" value="com.example.intelliprove.IntelliProvePlugin" />
       </feature>
     </config-file>
+    <!--
     <framework src="src/android/libs/IntelliProveWebView.aar" custom="true" type="aar" target-dir="libs" />
+    -->
+    <lib-file src="src/android/libs/IntelliProveWebView.aar" />
     <source-file src="src/android/IntelliProvePlugin.java" target-dir="src/com/example/intelliprove"/>
   </platform>
 
