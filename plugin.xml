@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-intelliprove" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+  <name>IntelliProve Plugin</name>
+  <description>Apache Cordova plugin for IntelliProve SDK to perform face scans.</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova, plugin, intelliprove, facescan</keywords>
+
+  <!-- JavaScript interface -->
+  <js-module name="IntelliProve" src="www/intelliprove.js">
+    <clobbers target="cordova.plugins.IntelliProve"/>
+  </js-module>
+
+  <!-- Android platform -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="IntelliProvePlugin">
+        <param name="android-package" value="com.example.intelliprove.IntelliProvePlugin" />
+      </feature>
+    </config-file>
+    <framework src="src/android/libs/IntelliProveWebView.aar" custom="true" type="aar" />
+    <source-file src="src/android/IntelliProvePlugin.java" target-dir="src/com/example/intelliprove"/>
+  </platform>
+
+  <!-- iOS platform -->
+  <platform name="ios">
+    <framework src="src/ios/Frameworks/IntelliProveSDK.xcframework" custom="true" embed="true" />
+    <source-file src="src/ios/IntelliProvePlugin.m" />
+  </platform>
+</plugin>
